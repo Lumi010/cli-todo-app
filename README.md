@@ -3,10 +3,41 @@
 A simple command-line To-Do application built with Python.
 
 ## Features
-- Add tasks
-- View tasks
+
+- Add new tasks
+- View all tasks
 - Delete tasks
-- Input validation
+- Simple menu-driven interface
+- Input validation with error handling
 
 ## How to Run
+
+1. Clone the repository
+
+git clone https://github.com/Lumi010/cli-todo-app.git
+
+2. Go to the project folder
+
+cd cli-todo-app
+
+3. Run the program
+
 python todo.py
+
+## Example
+
+1. Add Task
+2. View Tasks
+3. Delete Task
+4. Exit
+
+## What I Learned
+
+- Python functions
+- Lists and loops
+- Error handling with try/except
+- Basic Git workflow (init, add, commit, push)
+
+## Author
+
+Lumi010
