@@ -16,14 +16,15 @@ def show_menu():
     print("1. Add Task")
     print("2. View Tasks")
     print("3. Delete Task")
-    print("4. Exit")
+    print("4. Mark Task Complete")
+    print("5. Exit")
 def pause():
     input("\nPress Enter to return to menu...")
 
 def add_task(tasks):
     
     task = input("Enter task: ")
-    tasks.append(task)
+    tasks.append("[ ] " + task)
     save_tasks(tasks)
     print("Task added successfully!")
 
@@ -37,7 +38,20 @@ def view_tasks(tasks):
             print(f"{i+1}. {task}")
 
     pause()
+def mark_complete(tasks):
 
+    print("\nYour Tasks:")
+
+    for i, task in enumerate(tasks):
+        print(f"{i+1}. {task}")
+
+    choice = int(input("Enter task number to mark complete: "))
+
+    tasks[choice - 1] = tasks[choice - 1].replace("[ ]", "[x]")
+
+    save_tasks(tasks)
+
+    print("Task marked as complete!")
 
 def delete_task(tasks):
     if not tasks:
@@ -82,8 +96,11 @@ def main():
         elif choice == "3":
             delete_task(tasks)
         elif choice == "4":
-            print("Goodbye!")
-            break
+             mark_complete(tasks)
+
+        elif choice == "5":
+             print("Goodbye!")
+             break
         else:
             print("Invalid choice. Try again.")
 
