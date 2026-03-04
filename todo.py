@@ -21,8 +21,10 @@ def pause():
     input("\nPress Enter to return to menu...")
 
 def add_task(tasks):
+    
     task = input("Enter task: ")
     tasks.append(task)
+    save_tasks(tasks)
     print("Task added successfully!")
 
 
@@ -52,6 +54,8 @@ def delete_task(tasks):
 
         if 1 <= delete_choice <= len(tasks):
             removed = tasks.pop(delete_choice - 1)
+            
+            save_tasks(tasks)
             print(f"Task '{removed}' deleted successfully!")
         else:
             print("Invalid task number.")
@@ -60,8 +64,10 @@ def delete_task(tasks):
         print("Please enter a valid number.")
 
     pause()
-
-
+def save_tasks(tasks):
+    with open("tasks.txt", "w") as file:
+        for task in tasks:
+            file.write(task + "\n")
 def main():
     tasks = []
 
