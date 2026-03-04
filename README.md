@@ -1,6 +1,6 @@
 # CLI To-Do App
 
-A simple command-line To-Do application built with Python.
+A beginner-friendly command line To-Do application built in Python to practice functions, loops, and error handling.
 
 ## Features
 
