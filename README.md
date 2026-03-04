@@ -7,8 +7,15 @@ A beginner-friendly command line To-Do application built in Python to practice f
 - Add new tasks
 - View all tasks
 - Delete tasks
-- Simple menu-driven interface
+- Mark tasks as complete
+- Tasks are saved to a file (persistent storage)
 - Input validation with error handling
+
+## Example
+
+1. [ ] Study Python
+2. [x] Go to gym
+3. [ ] Finish assignment
 
 ## How to Run
 
