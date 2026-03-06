@@ -17,7 +17,8 @@ def show_menu():
     print("2. View Tasks")
     print("3. Delete Task")
     print("4. Mark Task Complete")
-    print("5. Exit")
+    print("5. Edit Task")
+    print("6. Exit")
 def pause():
     input("\nPress Enter to return to menu...")
 
@@ -52,6 +53,41 @@ def mark_complete(tasks):
     save_tasks(tasks)
 
     print("Task marked as complete!")
+
+def edit_task(tasks):
+
+    if not tasks:
+        print("No tasks available to edit.")
+        pause()
+        return
+
+    print("\nYour Tasks:")
+    for i, task in enumerate(tasks):
+        print(f"{i+1}. {task}")
+
+    try:
+        choice = int(input("Enter task number to edit: "))
+
+        if 1 <= choice <= len(tasks):
+
+            new_text = input("Enter new task description: ")
+
+           
+            status = tasks[choice - 1][:3]
+
+            tasks[choice - 1] = status + " " + new_text
+
+            save_tasks(tasks)
+
+            print("Task updated successfully!")
+
+        else:
+            print("Invalid task number.")
+
+    except ValueError:
+        print("Please enter a valid number.")
+
+    pause()    
 
 def delete_task(tasks):
     if not tasks:
@@ -103,8 +139,9 @@ def main():
             delete_task(tasks)
         elif choice == "4":
              mark_complete(tasks)
-
         elif choice == "5":
+             edit_task(tasks)   
+        elif choice == "6":
              print("Goodbye!")
              break
         else:
