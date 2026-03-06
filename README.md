@@ -37,7 +37,10 @@ python todo.py
 1. Add Task
 2. View Tasks
 3. Delete Task
-4. Exit
+4. Mark Task Complete
+5. Edit Task
+6. Exit
+
 
 ## What I Learned
 
