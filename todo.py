@@ -85,6 +85,12 @@ def save_tasks(tasks):
 def main():
     tasks = []
 
+    try:
+         with open("tasks.txt", "r") as file:
+             tasks = [line.strip() for line in file.readlines()]
+    except FileNotFoundError:
+         pass
+
     while True:
         show_menu()
         choice = input("Enter your choice: ")

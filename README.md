@@ -23,7 +23,7 @@ A beginner-friendly command line To-Do application built in Python to practice f
 
 git clone https://github.com/Lumi010/cli-todo-app.git
 
-2. Go to the project folder
+2. Go to the project folders
 
 cd cli-todo-app
 
