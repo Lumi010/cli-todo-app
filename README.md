@@ -8,8 +8,9 @@ A beginner-friendly command line To-Do application built in Python to practice f
 - View all tasks
 - Delete tasks
 - Mark tasks as complete
+- Edit existing tasks
 - Tasks are saved to a file (persistent storage)
-- Input validation with error handling
+- Input validation for safer user input
 
 ## Example
 
